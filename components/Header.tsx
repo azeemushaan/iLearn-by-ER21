@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Header: React.FC = () => {
@@ -18,7 +17,7 @@ const Header: React.FC = () => {
             <a href="#faq" className="text-slate-300 hover:text-white transition-colors">FAQ</a>
           </nav>
           <div className="flex items-center">
-            <a href="#" className="bg-white text-slate-900 font-semibold py-2 px-4 rounded-lg hover:bg-slate-200 transition-colors shadow-md">
+            <a href="#pricing" className="bg-white text-slate-900 font-semibold py-2 px-4 rounded-lg hover:bg-slate-200 transition-colors shadow-md">
               Sign Up
             </a>
           </div>

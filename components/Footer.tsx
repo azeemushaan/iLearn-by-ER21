@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -13,9 +12,9 @@ const Footer: React.FC = () => {
             <span className="text-sm font-semibold text-slate-500 ml-2 mt-0.5">by ER21</span>
           </div>
           <div className="mt-8 md:mt-0 md:order-2 flex justify-center space-x-6">
-            <a href="#" className="text-slate-400 hover:text-white transition-colors">Terms</a>
-            <a href="#" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-slate-400 hover:text-white transition-colors">Contact</a>
+            <a href="#" onClick={(e) => { e.preventDefault(); alert('Page coming soon!'); }} className="text-slate-400 hover:text-white transition-colors">Terms</a>
+            <a href="#" onClick={(e) => { e.preventDefault(); alert('Page coming soon!'); }} className="text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" onClick={(e) => { e.preventDefault(); alert('Page coming soon!'); }} className="text-slate-400 hover:text-white transition-colors">Contact</a>
           </div>
           <div className="mt-8 md:mt-0 md:order-1">
             <p className="text-center text-base text-slate-500">

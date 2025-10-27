@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { Plan } from '../types';
 
@@ -51,6 +50,14 @@ const PricingCard: React.FC<{ plan: Plan }> = ({ plan }) => (
     </ul>
     <a
       href="#"
+      onClick={(e) => {
+        e.preventDefault();
+        if (plan.name === 'Enterprise') {
+            window.location.href = 'mailto:sales@ilearn.com?subject=Enterprise Inquiry';
+        } else {
+            alert('Sign up process coming soon!');
+        }
+      }}
       className={`mt-8 block w-full text-center rounded-lg px-6 py-3 text-lg font-semibold ${plan.isPopular ? 'bg-blue-500 text-white hover:bg-blue-600' : 'bg-slate-700 text-white hover:bg-slate-600'} transition-colors`}
     >
       {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}

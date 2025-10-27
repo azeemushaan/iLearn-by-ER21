@@ -1,13 +1,20 @@
-
 import React from 'react';
 
 const Step: React.FC<{ number: number; title: string; description: string }> = ({ number, title, description }) => (
-  <div className="relative pl-12">
-    <div className="absolute left-0 top-1 flex items-center justify-center h-8 w-8 rounded-full bg-slate-700 border border-slate-600 text-blue-400 font-bold">
+  <div className="relative pl-12 pb-12 last:pb-0">
+    {/* The vertical line - hidden on the last step */}
+    <div className="absolute left-[15px] top-1 h-full w-px bg-slate-700 last:hidden"></div>
+
+    {/* The circle */}
+    <div className="absolute left-0 top-1 flex items-center justify-center h-8 w-8 rounded-full bg-slate-800 border-2 border-slate-700 text-blue-400 font-bold z-10 ring-8 ring-slate-900/50">
       {number}
     </div>
-    <h3 className="text-xl font-semibold text-white">{title}</h3>
-    <p className="mt-2 text-slate-400">{description}</p>
+
+    {/* The content */}
+    <div>
+      <h3 className="text-xl font-semibold text-white">{title}</h3>
+      <p className="mt-2 text-slate-400">{description}</p>
+    </div>
   </div>
 );
 
@@ -23,7 +30,7 @@ const HowItWorks: React.FC = () => {
             Transforming education is as easy as 1, 2, 3.
           </p>
         </div>
-        <div className="mt-16 max-w-3xl mx-auto grid md:grid-cols-1 gap-12">
+        <div className="mt-16 max-w-3xl mx-auto flex flex-col">
           <Step
             number={1}
             title="Paste a Playlist"

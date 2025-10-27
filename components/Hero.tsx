@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Hero: React.FC = () => {
@@ -17,13 +16,14 @@ const Hero: React.FC = () => {
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#"
+            href="#pricing"
             className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-teal-500 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
           >
             Start free
           </a>
           <a
             href="#"
+            onClick={(e) => { e.preventDefault(); alert('Demo video coming soon!'); }}
             className="w-full sm:w-auto bg-slate-700/50 text-white font-semibold py-3 px-8 rounded-lg border border-slate-600 hover:bg-slate-700 transition-colors"
           >
             Watch 60-sec demo
